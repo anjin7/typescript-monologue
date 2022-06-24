@@ -1,13 +1,15 @@
 # Monologue
 
+https://anjin7.github.io/typescript-monologue/
+
 개인 프로젝트
 
-### 구상
+### 구상ing...
 
 1. 게시판
 2. to-do
 
-### 계획
+### 계획ing...
 
 1. TypeScript
 2. React
