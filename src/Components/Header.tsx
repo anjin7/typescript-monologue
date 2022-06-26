@@ -2,7 +2,6 @@ import { Link, useRouteMatch, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { motion, useAnimation, useViewportScroll } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 
 const Nav = styled(motion.nav)`
   display: flex;
@@ -30,7 +29,7 @@ const Item = styled.li`
   margin-right: 20px;
   font-weight: 700;
   font-size: 16px;
-  color: gray;
+  color: rgb(128, 128, 128);
   transition: color 0.3s ease-in-out;
   position: relative;
   display: flex;
@@ -43,10 +42,10 @@ const Item = styled.li`
 
 const Circle = styled(motion.span)`
   position: absolute;
-  width: 24px;
+  width: 36px;
   height: 2px;
-  border-radius: 2.5px;
-  bottom: -5px;
+  border-radius: 5px;
+  bottom: -8px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -56,7 +55,7 @@ const Circle = styled(motion.span)`
 
 const navVariants = {
   top: {
-    background: "linear-gradient(rgba(208, 224, 255, 0.35),rgba(255,255,255,0))",
+    background: "linear-gradient(rgba(174, 193, 230, 0.35),rgba(255,255,255,0))",
     backgroundColor: "rgba(255, 255, 255, 0)",
   },
   scroll: {
@@ -64,14 +63,12 @@ const navVariants = {
   },
 };
 
-interface IForm {
-  keyword: string;
-}
 
 function Header() {
 
   const homeMatch = useRouteMatch("/");
   const todoMatch = useRouteMatch("/todo");
+  const mypageMatch = useRouteMatch("/mypage");
 
   const navAnimation = useAnimation();
   const { scrollY } = useViewportScroll();
@@ -89,22 +86,25 @@ function Header() {
   return (
     <Nav variants={navVariants} animate={navAnimation} initial={"top"}>
       <Col>
-
         <Items>
           <Item>
             <Link to="/">
-              Home {homeMatch?.isExact && <Circle layoutId="circle" />}
+              Monolog {homeMatch?.isExact && <Circle layoutId="circle" />}
             </Link>
           </Item>
           <Item>
             <Link to="/todo">
-              Todo {todoMatch && <Circle layoutId="circle" />}
+              TodoList {todoMatch && <Circle layoutId="circle" />}
+            </Link>
+          </Item>
+          <Item>
+            <Link to="/mypage">
+              MyPage {mypageMatch && <Circle layoutId="circle" />}
             </Link>
           </Item>
         </Items>
       </Col>
       <Col>
-
       </Col>
     </Nav>
   );
