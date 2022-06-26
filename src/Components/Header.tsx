@@ -55,7 +55,7 @@ const Circle = styled(motion.span)`
 
 const navVariants = {
   top: {
-    background: "linear-gradient(rgba(174, 193, 230, 0.35),rgba(255,255,255,0))",
+    background: "linear-gradient(rgba(209, 209, 209, 0.35),rgba(255,255,255,0))",
     backgroundColor: "rgba(255, 255, 255, 0)",
   },
   scroll: {

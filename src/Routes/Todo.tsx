@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   padding: 100px;
   height: 1800px;
-  background-color: rgb(5, 15, 44);
+  background:linear-gradient(135deg,#fcfaf2, #ffbfc5);
   color: white;
 `;
 
