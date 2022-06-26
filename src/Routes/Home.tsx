@@ -1,8 +1,15 @@
+import styled from 'styled-components';
+
+const Container = styled.div`
+  height: 1800px;
+`;
+
+
 function Home() {
   return (
-    <div>
+    <Container>
       Home
-    </div>
+    </Container>
   )
 }
 export default Home;
