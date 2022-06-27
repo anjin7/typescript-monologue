@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Routes/Home";
-import Mypage from './Routes/Mypage';
 import Todo from './Routes/Todo';
+import Challenge from './Routes/Challenge';
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
         <Route path="/todo">
           <Todo />
         </Route>
-        <Route path="/mypage">
-          <Mypage />
+        <Route path="/challenge">
+          <Challenge />
         </Route>
         <Route path="/">
           <Home />

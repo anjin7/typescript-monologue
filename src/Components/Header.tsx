@@ -68,7 +68,7 @@ function Header() {
 
   const homeMatch = useRouteMatch("/");
   const todoMatch = useRouteMatch("/todo");
-  const mypageMatch = useRouteMatch("/mypage");
+  const challengeMatch = useRouteMatch("/challenge");
 
   const navAnimation = useAnimation();
   const { scrollY } = useViewportScroll();
@@ -98,8 +98,8 @@ function Header() {
             </Link>
           </Item>
           <Item>
-            <Link to="/mypage">
-              MyPage {mypageMatch && <Circle layoutId="circle" />}
+            <Link to="/challenge">
+              Challenge {challengeMatch && <Circle layoutId="circle" />}
             </Link>
           </Item>
         </Items>

@@ -8,6 +8,7 @@ https://anjin7.github.io/typescript-monologue/
 
 1. 게시판
 2. to-do
+3. random 챌린지(30일 챌린지 중 한가지 랜덤으로 선택) -> todo로 등록되도록
 
 ### 계획ing...
 
