@@ -11,7 +11,7 @@ const Container = styled.div`
   margin: 60px auto;
   padding: 20px;
 `;
-const Clock = styled.div`
+const ClockList = styled.div`
   margin: 0 auto;
   text-align: center;
   padding: 10px;
@@ -22,7 +22,7 @@ const Clock = styled.div`
 
 const week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
-function getClock() {
+function Clock() {
   const [time, setTime] = useState(new Date());
   useEffect(() => {
     const id = setInterval(() => {
@@ -41,9 +41,9 @@ function getClock() {
   return (
     <Container>
       <div>{ time.toLocaleTimeString}</div>
-      <Clock>{year}.{month}.{todate}.{day}</Clock>
-      <Clock>{hours}:{minutes}:{seconds}</Clock>
+      <ClockList>{year}.{month}.{todate}.{day}</ClockList>
+      <ClockList>{hours}:{minutes}:{seconds}</ClockList>
     </Container>
   )
 }
-export default getClock;
+export default Clock;
