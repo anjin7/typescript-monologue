@@ -2,22 +2,20 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  width: 400px;
-  background-color: white;
-  margin-top: 60px;
-  border-radius: 15px;
+  border-radius: 10px;
   box-sizing: border-box;
   border: 1px solid skyblue;
-  margin: 60px auto;
-  padding: 20px;
+  position: fixed;
+  right: 24px;
+  background-color: rgba(252, 250, 242, 0.4);
 `;
 const ClockList = styled.div`
   margin: 0 auto;
   text-align: center;
-  padding: 10px;
+  padding: 8px 16px;
   font-weight: 900;
-  font-size: 40px;
-  color: gray;
+  font-size: 16px;
+  color: rgb(100, 100, 100);
 `;
 
 const week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
@@ -32,7 +30,7 @@ function Clock() {
   }, []);
   const hours = String(time.getHours()).padStart(2, "0");
   const minutes = String(time.getMinutes()).padStart(2, "0");
-  const seconds = String(time.getSeconds()).padStart(2, "0");
+  // const seconds = String(time.getSeconds()).padStart(2, "0");
   const year = time.getFullYear();
   const month = String(time.getMonth()+1).padStart(2, "0");
   const todate = String(time.getDate()).padStart(2, "0");
@@ -40,9 +38,7 @@ function Clock() {
 
   return (
     <Container>
-      <div>{ time.toLocaleTimeString}</div>
-      <ClockList>{year}.{month}.{todate}.{day}</ClockList>
-      <ClockList>{hours}:{minutes}:{seconds}</ClockList>
+      <ClockList>{year}. {month}. {todate}. {day} {hours}:{minutes}</ClockList>
     </Container>
   )
 }
