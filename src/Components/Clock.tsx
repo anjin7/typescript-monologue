@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  border-radius: 10px;
+  border-radius: 8px;
   box-sizing: border-box;
-  border: 1px solid skyblue;
+  border-top: 1px solid skyblue;
+  border-bottom: 1px solid skyblue;
   position: fixed;
   right: 24px;
-  background-color: rgba(252, 250, 242, 0.4);
+  /* background-color: rgba(252, 250, 242, 0.4); */
 `;
 const ClockList = styled.div`
   margin: 0 auto;
