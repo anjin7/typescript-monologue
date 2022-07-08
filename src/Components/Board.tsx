@@ -9,23 +9,25 @@ function Board() {
           <col width="40px" />                    
         </colgroup>
         <thead>
-          <td>#</td>
-          <td></td>
-          <td>Date</td>
-          <td>delete</td>
+          <tr>
+            <td>#</td>
+            <td></td>
+            <td>Date</td>
+            <td>delete</td>
+          </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
             <td>abcdefg</td>
             <td>2022-07-19</td>
-            <td>a</td>
+            <td>x</td>
           </tr>
           <tr>
             <td>2</td>
             <td>abcd</td>
             <td>2022-07-19</td>
-            <td>a</td>
+            <td>x</td>
           </tr> 
         </tbody>                
       </table>
