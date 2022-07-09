@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Routes/Home";
 import Todo from './Routes/Todo';
-import Challenge from './Routes/Challenge';
+import Note from './Routes/Note';
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
         <Route path="/todo">
           <Todo />
         </Route>
-        <Route path="/challenge">
-          <Challenge />
+        <Route path="/note">
+          <Note />
         </Route>
         <Route path="/">
           <Home />

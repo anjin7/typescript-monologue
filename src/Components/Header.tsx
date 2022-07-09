@@ -69,7 +69,7 @@ function Header() {
 
   const homeMatch = useRouteMatch("/");
   const todoMatch = useRouteMatch("/todo");
-  const challengeMatch = useRouteMatch("/challenge");
+  const noteMatch = useRouteMatch("/note");
 
   const navAnimation = useAnimation();
   const { scrollY } = useViewportScroll();
@@ -99,8 +99,8 @@ function Header() {
             </Link>
           </Item>
           <Item>
-            <Link to="/challenge">
-              Challenge {challengeMatch && <Circle layoutId="circle" />}
+            <Link to="/note">
+              Note {noteMatch && <Circle layoutId="circle" />}
             </Link>
           </Item>
         </Items>
