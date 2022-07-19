@@ -5,7 +5,6 @@ import { actionCreators } from "../store";
 import ToDos from "../Components/ToDos";
 import styled from 'styled-components';
 
-
 const Container = styled.div`
   padding: 100px;
   height: 1800px;
@@ -22,13 +21,13 @@ function Todo() {
   }
   function onSubmit(e) {
     e.preventDefault();
-    console.log(text);
+    // console.log(text);
     dispatch(actionCreators.addToDo(text));
     setText("");
   }
   return (
     <Container>
-      <h1>To Do</h1>
+      <h2>To Do</h2>
       <form onSubmit={onSubmit}>
         <input type="text" value={text} onChange={onChange} />
         <button>Add</button>
