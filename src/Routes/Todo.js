@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   padding: 100px;
-  height: 1800px;
+  height: 100vh;
   background:linear-gradient(135deg,#fcfaf2, #ffbfc5);
 `;
 

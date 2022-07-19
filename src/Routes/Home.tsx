@@ -3,7 +3,7 @@ import Board from '../Components/Board';
 
 
 const Container = styled.div`
-  height: 1800px;
+  height: 100vh;
   padding-top: 100px;
   padding-left: 40px;
 `;
