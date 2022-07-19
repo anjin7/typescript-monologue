@@ -4,8 +4,9 @@ import { RecoilRoot } from "recoil";
 import { ThemeProvider } from "styled-components";
 import App from "./App";
 import { lightTheme } from "./theme";
-
 import { createGlobalStyle } from "styled-components";
+import { Provider } from "react-redux";
+import store from "./store";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -76,8 +77,10 @@ ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
       <ThemeProvider theme={lightTheme}>
-        <GlobalStyle />
-        <App />
+        <Provider store={store}>
+          <GlobalStyle />
+          <App />
+        </Provider>
       </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>,
