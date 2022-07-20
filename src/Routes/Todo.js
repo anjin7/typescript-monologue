@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { actionCreators } from "../store";
@@ -9,6 +8,19 @@ const Container = styled.div`
   padding: 100px;
   height: 100vh;
   background:linear-gradient(135deg,#fcfaf2, #ffbfc5);
+`;
+const TodoTitle = styled.h2`
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffbfc5;
+`;
+const TodoInput = styled.input`
+  border: 1px solid #ffbfc5;
+  margin: 8px 12px 8px 0;
+`;
+const TodoBtn = styled.button`
+  background-color: #ffbfc5;
+  border: 1px solid #fff;
 `;
 
 function Todo() {
@@ -27,10 +39,10 @@ function Todo() {
   }
   return (
     <Container>
-      <h2>To Do</h2>
+      <TodoTitle>To Do</TodoTitle>
       <form onSubmit={onSubmit}>
-        <input type="text" value={text} onChange={onChange} />
-        <button>Add</button>
+        <TodoInput type="text" value={text} onChange={onChange} />
+        <TodoBtn>Add</TodoBtn>
       </form>
       <ul>
         {toDo.map(toDo => (
