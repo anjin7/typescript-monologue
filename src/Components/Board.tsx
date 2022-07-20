@@ -1,6 +1,6 @@
 function Board() {
   return (
-    <div>
+    <>
       <table>
         <colgroup>
           <col width="40px" />
@@ -31,7 +31,7 @@ function Board() {
           </tr> 
         </tbody>                
       </table>
-    </div>
+    </>
   )
 }
 

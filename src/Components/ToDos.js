@@ -8,14 +8,17 @@ const Btn = styled.button`
   background-color: #ffbfc5;
   border: 1px solid #fff;
 `;
+const TodoList = styled.li`
+  margin: 8px 4px;
+`;
 
 function ToDos({ text, onBtnClick, id }) {
   return (
-    <li>
+    <TodoList>
       <>
         - {text} <Btn onClick={onBtnClick}>DEL</Btn>
       </>
-    </li>
+    </TodoList>
   );
 }
 

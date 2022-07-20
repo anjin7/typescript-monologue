@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Board from '../Components/Board';
 
-
 const Container = styled.div`
   height: 100vh;
   padding-top: 100px;
