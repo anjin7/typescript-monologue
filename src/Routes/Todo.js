@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { actionCreators } from "../store";
+import { connect } from "react-redux";
+import { add } from "../store";
 import ToDos from "../Components/ToDos";
 import styled from 'styled-components';
 
@@ -23,18 +23,14 @@ const TodoBtn = styled.button`
   border: 1px solid #fff;
 `;
 
-function Todo() {
+function Todo({ toDo, addToDo }) {
   const [text, setText] = useState("");
-  const toDo = useSelector((state) => state);
-  const dispatch = useDispatch();
-
   function onChange(e) {
     setText(e.target.value);
   }
   function onSubmit(e) {
     e.preventDefault();
-    // console.log(text);
-    dispatch(actionCreators.addToDo(text));
+    addToDo(text);
     setText("");
   }
   return (
@@ -52,5 +48,15 @@ function Todo() {
     </Container>
   );
 }
+function mapStateToProps(state) {
+  return { toDos: state };
+}
 
-export default Todo;
+function mapDispatchToProps(dispatch) {
+  return {
+    addToDo: text => dispatch(add(text))
+  };
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Todo);
