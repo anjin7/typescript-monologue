@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { actionCreators } from "../store";
 import styled from 'styled-components';
 // import { Link } from "react-router-dom";
 
@@ -22,10 +21,13 @@ function ToDos({ text, onBtnClick, id }) {
   );
 }
 
-function mapDispatchToProps(dispatch, ownProps) {
-  return {
-    onBtnClick: () => dispatch(actionCreators.deleteToDo(ownProps.id))
-  };
+function mapStateToProps(state, ownProps) {
+  const {
+    match: {
+      params: { id }
+    }
+  } = ownProps;
+  return { toDo: state.find(toDo => toDo.id === parseInt(id)) };
 }
 
-export default connect(null, mapDispatchToProps)(ToDos);
+export default connect(mapStateToProps)(ToDos);

@@ -1,6 +1,6 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
-const toDos = createSlice({
+export const toDos = createSlice({
   name: "toDosReducer",
   initialState: [],
   reducers: {
