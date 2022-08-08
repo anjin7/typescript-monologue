@@ -1,7 +1,7 @@
-import { Link, useRouteMatch, useHistory } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 import styled from "styled-components";
 import { motion, useAnimation, useViewportScroll } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Clock from './Clock';
 
 const Nav = styled(motion.nav)`
