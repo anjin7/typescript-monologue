@@ -14,9 +14,9 @@ const TodoList = styled.li`
 function ToDos({ text, onBtnClick, id }) {
   return (
     <TodoList>
-      <>
+      <div>
         - {text} <Btn onClick={onBtnClick}>DEL</Btn>
-      </>
+      </div>
     </TodoList>
   );
 }

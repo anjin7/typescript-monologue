@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 
 function Detail({ toDo }) {
   return (
-    <>
+    <div>
       <h1>{toDo?.text}</h1>
       <h5>Created at: {toDo?.id}</h5>
-    </>
+    </div>
   );
 }
 
