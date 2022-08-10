@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { connect } from "react-redux";
 import { add } from "../store";
 import ToDos from "../Components/ToDos";
@@ -57,6 +57,5 @@ function mapDispatchToProps(dispatch) {
     addToDo: text => dispatch(add(text))
   };
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Todo);

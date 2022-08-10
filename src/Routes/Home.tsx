@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import Board from '../Components/Board';
+import LogIn from '../Components/LogIn';
+
 
 const Container = styled.div`
   height: 100vh;
@@ -10,7 +11,7 @@ const Container = styled.div`
 function Home() {
   return (
     <Container>
-      <Board />
+      <LogIn />
     </Container>
   )
 }

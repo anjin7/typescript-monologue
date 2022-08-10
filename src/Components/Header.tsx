@@ -66,7 +66,6 @@ const navVariants = {
 
 
 function Header() {
-
   const homeMatch = useRouteMatch("/");
   const todoMatch = useRouteMatch("/todo");
   const noteMatch = useRouteMatch("/note");
