@@ -6,8 +6,8 @@ https://anjin7.github.io/typescript-monologue/
 
 ### 구상ing...
 
-1. 게시판(main)
-2. to-do (+ random challenge 30일챌린지)
+1. 로그인
+2. to-do
 3. painting + image (React)
 
 ### 계획ing...
