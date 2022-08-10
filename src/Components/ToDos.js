@@ -1,33 +1,31 @@
 import React from "react";
 import { connect } from "react-redux";
 import styled from 'styled-components';
+import { remove } from "../store";
 // import { Link } from "react-router-dom";
 
 const Btn = styled.button`
   background-color: #ffbfc5;
   border: 1px solid #fff;
 `;
-const TodoList = styled.li`
+const TodoList = styled.div`
   margin: 8px 4px;
 `;
 
 function ToDos({ text, onBtnClick, id }) {
   return (
-    <TodoList>
-      <div>
+    <li>
+      <TodoList>
         - {text} <Btn onClick={onBtnClick}>DEL</Btn>
-      </div>
-    </TodoList>
+      </TodoList>
+    </li>
   );
 }
 
-function mapStateToProps(state, ownProps) {
-  const {
-    match: {
-      params: { id }
-    }
-  } = ownProps;
-  return { toDo: state.find(toDo => toDo.id === parseInt(id)) };
+function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    onBtnClick: () => dispatch(remove(ownProps.id))
+  };
 }
 
-export default connect(mapStateToProps)(ToDos);
+export default connect(null, mapDispatchToProps)(ToDos);

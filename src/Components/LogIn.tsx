@@ -6,7 +6,6 @@ const Container =styled.div`
   height: 500px;
   background-color: white;
   border-radius: 25px;
-  margin-top: 40px;
   text-align: center;
 `
 
