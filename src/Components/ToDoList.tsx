@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const ToDoTiltle = styled.h2`
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
 `
 function ToDoList() {
