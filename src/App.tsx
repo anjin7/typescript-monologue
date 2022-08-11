@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/todo">
-          <Todo toDo={undefined} />
+          <Todo />
         </Route>
         <Route path="/note">
           <Note />
