@@ -3,7 +3,16 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { Categories, categoryState, toDoSelector } from "../atoms";
 import CreateToDo from "./CreateToDo";
 import ToDo from "./ToDo";
+import styled from 'styled-components';
 
+const Container = styled.div`
+
+`;
+
+const ToDoTiltle = styled.h2`
+  font-size: 28px;
+  font-weight: 700;
+`
 function ToDoList() {
   const toDos = useRecoilValue(toDoSelector);
   const [category, setCategory] = useRecoilState(categoryState);
@@ -11,8 +20,8 @@ function ToDoList() {
     setCategory(event.currentTarget.value as any);
   };
   return (
-    <div>
-      <h1>To Dos</h1>
+    <Container>
+      <ToDoTiltle>To Dos</ToDoTiltle>
       <hr />
       <select value={category} onInput={onInput}>
         <option value={Categories.TO_DO}>To Do</option>
@@ -23,7 +32,7 @@ function ToDoList() {
       {toDos?.map((toDo) => (
         <ToDo key={toDo.id} {...toDo} />
       ))}
-    </div>
+    </Container>
   );
 }
 export default ToDoList;
