@@ -8,7 +8,7 @@ const Container = styled.div`
 function Note() {
   return (
     <Container>
-      painting
+      Painting board
     </Container>
   )
 };

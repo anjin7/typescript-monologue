@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  border-radius: 8px;
   box-sizing: border-box;
-  /* border-top: 1px solid skyblue;
-  border-bottom: 1px solid skyblue; */
   position: fixed;
   right: 24px;
-  /* background-color: rgba(252, 250, 242, 0.4); */
+  /* border-bottom: 2px solid skyblue;  */
+  background-color: rgba(255, 251, 237, 0.4);
+  border-radius: 8px;
 `;
 const ClockList = styled.div`
+
   margin: 0 auto;
   text-align: center;
   padding: 8px 16px;
