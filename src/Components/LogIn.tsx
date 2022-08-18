@@ -44,13 +44,15 @@ function LogIn() {
       <InnerBox>
         <form onSubmit={onSubmit}>
           <InputBox
-            type="text"
+            name="email"
+            type="email"
             placeholder="Email"
             required
             value={email}
             onChange={onChange}
           />
           <InputBox
+            name="password"
             type="password"
             placeholder="PassWord"
             required
