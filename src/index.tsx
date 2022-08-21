@@ -77,7 +77,7 @@ ReactDOM.render(
     <RecoilRoot>
       <ThemeProvider theme={lightTheme}>
           <GlobalStyle />
-          <App />
+          <App isLoggedIn={undefined} />
       </ThemeProvider>
     </RecoilRoot>
   </React.StrictMode>,
