@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import App from '../App';
 import LogIn from '../Components/LogIn';
 
 const Container = styled.div`
@@ -8,8 +10,21 @@ const Container = styled.div`
 `;
 
 function Home() {
+  const [init, setInit] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    authService.onAuthStateChanged((user) => {
+      if (user) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+      setInit(true);
+    });
+  }, []);
   return (
     <Container>
+      {init ? <App isLoggedIn={isLoggedIn} /> : "Initializing..."}
       <LogIn />
     </Container>
   )
