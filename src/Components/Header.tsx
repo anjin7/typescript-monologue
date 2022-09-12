@@ -68,7 +68,7 @@ const navVariants = {
 function Header() {
   const homeMatch = useRouteMatch("/");
   const todoMatch = useRouteMatch("/todo");
-  const noteMatch = useRouteMatch("/note");
+  const projectMatch = useRouteMatch("/project");
 
   const navAnimation = useAnimation();
   const { scrollY } = useViewportScroll();
@@ -98,8 +98,8 @@ function Header() {
             </Link>
           </Item>
           <Item>
-            <Link to="/note">
-              Note {noteMatch && <Circle layoutId="circle" />}
+            <Link to="/project">
+              Project {projectMatch && <Circle layoutId="circle" />}
             </Link>
           </Item>
         </Items>
