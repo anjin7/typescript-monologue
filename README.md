@@ -6,9 +6,9 @@ https://anjin7.github.io/typescript-monologue/
 
 ### 구상ing...
 
-1. 로그인
-2. to-do
-3. painting + image (React)
+1. 포폴사이트
+2. 자소서
+3. 플젝
 
 ### 계획ing...
 
