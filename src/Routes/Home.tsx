@@ -4,12 +4,18 @@ const Container = styled.div`
   height: 100vh;
   width: 100vw;
   padding-top: 100px;
+  text-align: center;
 `;
 
 function Home() {
   return (
     <Container>
-      Hello
+      <div>
+        card : resume
+      </div>     
+      <div>
+        card 
+      </div>
     </Container>
   )
 }
