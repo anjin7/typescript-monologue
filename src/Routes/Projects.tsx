@@ -5,11 +5,11 @@ const Container = styled.div`
   height: 1600px;
 `;
 
-function Note() {
+function Projects() {
   return (
     <Container>
       Project slide
     </Container>
   )
 };
-export default Note;
+export default Projects;
