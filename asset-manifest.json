@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/typescript-monologue/static/js/main.e475ae59.js",
+    "main.js": "/typescript-monologue/static/js/main.de1a0f99.js",
     "index.html": "/typescript-monologue/index.html",
-    "main.e475ae59.js.map": "/typescript-monologue/static/js/main.e475ae59.js.map"
+    "main.de1a0f99.js.map": "/typescript-monologue/static/js/main.de1a0f99.js.map"
   },
   "entrypoints": [
-    "static/js/main.e475ae59.js"
+    "static/js/main.de1a0f99.js"
   ]
 }
